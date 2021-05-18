@@ -26,7 +26,8 @@
                 <nav class="circles">
                     <i class="fa-circle"
                     v-for="(imag, index) in images"
-                    :class="(index == imageIndex) ? 'fas' : 'far'"></i>
+                    :class="(index == imageIndex) ? 'fas' : 'far'"
+                    @click="imageIndex = index"></i>
                 </nav>              
             </div>
         </main>      

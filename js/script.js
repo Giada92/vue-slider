@@ -23,7 +23,9 @@ var app = new Vue(
                 if(this.imageIndex <= -1) {
                     this.imageIndex = this.images.length - 1;
                 }
-            } 
+            }
         }
     }
 );
+
+
