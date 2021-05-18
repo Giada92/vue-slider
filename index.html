@@ -15,13 +15,13 @@
         <main id="root">
             <div class="container">
                 <div class="prev">
-                    <i class="fas fa-chevron-left"></i>
+                    <i @click="prevImg" class="fas fa-chevron-left"></i>
                 </div>
                 <div class="slider">
-                    <img src="img/img_1.jpg" alt="Scozia_img1">
+                    <img :src="images[imageIndex]" alt="Scozia_img1">
                 </div>
                 <div class="next">
-                    <i class="fas fa-chevron-right"></i>
+                    <i @click="nextImg" class="fas fa-chevron-right"></i>
                 </div>
             </div>
         </main>      
