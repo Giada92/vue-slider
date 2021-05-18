@@ -1,6 +1,10 @@
 var app = new Vue(
     {
         el: "#root",
+        components: {
+            'carousel': VueCarousel.Carousel,
+            'slide': VueCarousel.Slide
+        },
         data: {
             images: [
                 "img/img_1.jpg",
@@ -26,19 +30,11 @@ var app = new Vue(
                 }
             },
         },
-        created (){
-            setInterval(this.nextImg, 3000);
+        mounted (){
+            setInterval(this.nextImg, 4000);
         }
     }
 );
 
 
 /* Applicare l'autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente. */
-
-/* var app=new Vue({
-    el: "#app",
-    components: {
-      'carousel': VueCarousel.Carousel,
-      'slide': VueCarousel.Slide
-    },
-  }); */
