@@ -18,7 +18,8 @@
                     <i @click="prevImg" class="fas fa-chevron-left"></i>
                 </div>
                 <div class="slider">
-                    <img :src="images[imageIndex]" alt="Scozia_img1">
+                    <img :src="images[imageIndex]" alt="Scozia_img1"
+                    v-bind:autoplay="true" v-bind:loop="true">
                 </div>
                 <div class="next">
                     <i @click="nextImg" class="fas fa-chevron-right"></i>
@@ -27,7 +28,7 @@
                     <i class="fa-circle"
                     v-for="(imag, index) in images"
                     :class="(index == imageIndex) ? 'fas' : 'far'"
-                    @click="imageIndex = index"></i>
+                    @click="imageIndex = index" :data="images[imageIndex]"></i>
                 </nav>              
             </div>
         </main>      

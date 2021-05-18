@@ -11,6 +11,7 @@ var app = new Vue(
             ],
             imageIndex: 0
         },
+        
         methods: {
             nextImg: function() {
                 this.imageIndex++;
@@ -23,9 +24,21 @@ var app = new Vue(
                 if(this.imageIndex <= -1) {
                     this.imageIndex = this.images.length - 1;
                 }
-            }
+            },
+        },
+        created (){
+            setInterval(this.nextImg, 3000);
         }
     }
 );
 
 
+/* Applicare l'autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente. */
+
+/* var app=new Vue({
+    el: "#app",
+    components: {
+      'carousel': VueCarousel.Carousel,
+      'slide': VueCarousel.Slide
+    },
+  }); */
